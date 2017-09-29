@@ -1,7 +1,8 @@
 <?php
   session_start();
    $x=$_SESSION['email'];
-$link = mysqli_connect("localhost","root","","messaging_system");
+   $y=$_SESSION['UserID'];
+$link = mysqli_connect("localhost","root","","messaging system");
 if (mysqli_connect_error()) {
 die("Could not connect to database");
 }
@@ -20,8 +21,8 @@ die("Could not connect to database");
 
   <?php
 
-if(isset($_GET['mes'])){
-$id = $_GET['mes'];
+if(isset($_GET['messsage'])){
+$id = $_GET['messsage'];
 
 $query = "SELECT * FROM message WHERE ID ='$id' ";
 $result=mysqli_query($link, $query);
@@ -54,9 +55,11 @@ $time = $row["TimeStamp"];
    <a id="logo" href="#">OP</a>
   <nav>
     <ul>
-      <li><a href="send.html">SEND</a></li>
+      <li><a href="send.php">SEND</a></li>
+      
       <li><a href="try1.php">inbox</a></li>
-      <li><a href="logout.php">logout</a></li>
+      
+      <li><a href="logoutproc.php">logout</a></li>
       
     </ul>
   </nav>
@@ -77,7 +80,7 @@ echo '<table class="form1">
     //   $query = mysql_query("SELECT * FROM message WHERE M_To='$x' ");{
 
 
-$query = "SELECT * FROM message WHERE M_To='$x' ";
+$query = "SELECT * FROM message WHERE UserID='$y' ";
 if ($result=mysqli_query($link, $query)) {
 
   while($row=mysqli_fetch_array($result)){
@@ -87,7 +90,7 @@ $message = $row["Message"];
 $id= $row["ID"];
        echo ' <tr>';
        echo ' <td>'.$from.'</td>';
-       echo ' <td><a href="?mes='.$id.'">'.$subject.'</a></td>';
+       echo ' <td><a href="?messsage='.$id.'">'.$subject.'</a></td>';
        echo '<td>'.$id.'</td>'; 
        echo ' </tr>';
 }

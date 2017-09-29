@@ -33,7 +33,7 @@ $conn = new mysqli('localhost','root','','messaging system');
 		 }else {
 		 	
 		 	 $DB_error ="email is exits";
-		 	 header( "Refresh:3; url=Mailprocess.php" );
+		 	 header( "Refresh:2; url=Mailprocess.php" );
 		 	 
 		 	 
 		 	 

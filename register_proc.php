@@ -148,7 +148,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     		$DB_error ="New record created successfully";
     		mysqli_stmt_bind_param($stmt,"sssssss",$Name,$Email,$password,$Phone,$Gender,$Date,$M_Teacher);
     		mysqli_stmt_execute($stmt);
-    		header( "Refresh:3; url=login.php" );
+    		header( "Refresh:2; url=login.php" );
 			} else {
     							
     		$DB_error ="something wents wrong !!!! ";

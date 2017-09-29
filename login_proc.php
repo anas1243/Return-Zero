@@ -40,10 +40,16 @@ $conn = new mysqli('localhost','root','','messaging system');
 		 
 		 $result= $conn->query("SELECT * FROM user WHERE Email = '$Email' AND Password='$Password' ");
 		 if( $result->num_rows > 0 ){
+		 	$row = $result->fetch_assoc();
+		 	session_start();
+		 	$_SESSION['email'] = $row['Email'];
+		 	$_SESSION['UserID'] = $row['UserID'];
+		 	
+		 	
 		 
 		 $DB_error ="welcome habibi ";
-		 
-    		header( "Refresh:3; url=register.php" );
+		 	
+    		header( "Refresh:2; url=try1.php" );
 		 
 		 
 		 }else{

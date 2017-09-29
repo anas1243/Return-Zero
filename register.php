@@ -60,8 +60,40 @@
 		</div>
 		
     <span class="error"><?php echo $Gender_error;?></span>
+    		Select date:
+<select name="day">
+<?php 
+for($i=1;$i<=31;$i++)
+{
+    echo '<option value='.$i.'>'.$i.'</option>';
+}
+?>
+</select>
+<select name="month">
+<option value="January">January</option>
+<option value="February">February</option>
+<option value="Mars">Mars</option>
+<option value="April">April</option>
+<option value="May">May</option>
+<option value="June">June</option>
+<option value="July">July</option>
+<option value="September">September</option>
+<option value="October">October</option>
+<option value="November">November</option>
+<option value="December">December</option>
+</select>
 
-		    <input placeholder="BirthDate       ex:{yyyy-mm-dd}" name="Date" value="<?php echo $Date; ?>" type="text"    />
+<select name="year">
+<?php
+for($i=1905;$i<=2015;$i++)
+{
+    echo '<option value='.$i.'>'.$i.'</option>';
+}
+
+?>
+</select>
+
+
         <span class="error"> <?php echo $Date_error;?></span>
 
         

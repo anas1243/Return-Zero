@@ -47,7 +47,7 @@ $conn = new mysqli('localhost','root','','messaging system');
 		 	
 		 	
 		 
-		 $DB_error ="welcome habibi ";
+		 $DB_error ="welcome  ";
 		 	
     		header( "Refresh:2; url=try1.php" );
 		 

@@ -56,7 +56,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Phone = test_input($_POST["Phone"]);
     // check if e-mail address is well-formed
     if (!preg_match("/^(\d[\s-]?)?[\(\[\s-]{0,2}?\d{3}[\)\]\s-]{0,2}?\d{3}[\s-]?\d{4}$/i",$Phone)) {
-      $Phone_error = "Invalid phone number"; 
+      $Phone_error = "Invalid phone number 
+                        ex: 01xxxxxxxxx"; 
     }
   }
 
@@ -65,15 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } 
   
     //birthdate validation
-  if (empty($_POST["Date"])) {
-    $Date_error = "BirthDate is required";
-  } else {
-    $Date = test_input($_POST["Date"]);
-    // check if Date is well-formed
-    if (!preg_match("/^[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}$/",$Date)) {
-      $Date_error = "Invalid Date "; 
-    }
-  }
+##
   
   
   
@@ -99,8 +92,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
  
     if (!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/",$password)) {
-      $password_error = "Invalid password ! "; 
-    }
+      $password_error = " a minimum of 1 lower case letter [a-z] and
+                          a minimum of 1 upper case letter [A-Z] and
+                          a minimum of 1 numeric character [0-9] and
+                                                                     "; 
+                                                                        }
   }
   
   if (empty($_POST["Repassword"])) {

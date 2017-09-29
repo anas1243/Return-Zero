@@ -26,10 +26,10 @@
     <form  method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" >
     
     		<span class="error"> <?php echo $DB_error; ?></span>
-    		
+    		<span class="error"> <?php echo $Email_error;?></span>
         <input placeholder="Email       ex:{joe123@mail.com}" name="Email" value="<?php echo $Email; ?>" type="text"    />
         
-        <span class="error"> <?php echo $Email_error;?></span>
+        
         
         <button type="submit" data-submit="...Sending">SEND</button>
         

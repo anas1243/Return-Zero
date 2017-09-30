@@ -1,0 +1,19 @@
+{
+    "name": "cyber security/my_project",
+    "description": "Capstone for cyber security",
+    "authors": [
+        {
+            "name": "Ahmed Andaloes",
+            "email": "ahmedandaloes@outlook.com",
+            "name": "Anas hassa",
+            "email": "anas1243@gmail.com",
+            "name": "Sherif abdelmenim",
+            "email": "sherief33392@gmail.com"
+
+
+        }
+    ],
+    "require": {
+        "php": "7.0.0"
+    }
+}

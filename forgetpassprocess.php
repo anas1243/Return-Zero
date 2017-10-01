@@ -32,7 +32,7 @@ $conn = new mysqli('sql105.epizy.com','epiz_20780607','ahrgsZmpNa','epiz_2078060
 		 }else {
 
 
-		 	 //header( "Refresh:2; url=Mailprocess.php" );
+		 	 header( "Refresh:2; url=http://return-zero.epizy.com" );
 
 		 	  include 'Mailprocess.php';
 

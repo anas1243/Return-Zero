@@ -29,7 +29,7 @@
   
   <nav>
     <ul>  
-      <li><a href="home.php">Home</a></li>
+      <li><a href="index.php">Home</a></li>
       <li><a href="login.php">LOGIN</a></li>
       <li><a href="register.php">REGISTRATION</a></li>
  

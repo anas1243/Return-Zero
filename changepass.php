@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
      <meta charset="UTF-8">
-    <title>FuckMailBox</title>
+  <title>RETURN_ZERO</title>
     
 	<?php include 'changepassprocess.php';?>	
 	

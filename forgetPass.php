@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
      <meta charset="UTF-8">
-    <title>FuckMailBox</title>
+  <title>RETURN_ZERO</title> 
     
 
     <?php include 'forgetpassprocess.php';?>
@@ -18,6 +18,17 @@
 
 <body>
 
+	<header>
+   <a id="logo" href="#">OP</a>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+       <li><a href="login.php">LOGIN</a></li>
+      <li><a href="register.php">REGISTRATION</a></li>
+     
+    </ul>
+  </nav>
+</header>
 	
 <div class='wrap'>
  FORGET PASSWORD

@@ -10,10 +10,10 @@ die("Could not connect to database");
 ?>
 
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en">
  <head>
     <meta charset="utf-8">
-    <title>mailBOX</title>
+    <title>RETURN_ZERO</title>
       <link type="text/css" rel="stylesheet" href="sendsty.css">
   <link type="text/css" rel="stylesheet" href="navsty.css">
 

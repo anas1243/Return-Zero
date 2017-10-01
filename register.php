@@ -3,7 +3,7 @@
 <html>
 <head>
      
-    <title>FuckMailBox</title>
+<title>RETURN_ZERO</title>
     <?php include 'register_proc.php';?>
 
 	<link type="text/css" rel="stylesheet" href="registersty.css">
@@ -21,18 +21,21 @@
 
 	
 
-		<header>
-   <a id="logo" href="#">OP</a>
+<header>
+
+    <a href="login.php" id="logo">
+                     <img src="rezero.png" height="55px" width=" 80px">
+                </a>
+  
   <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-       <li><a href="login.php">LOGIN</a></li>
+    <ul>  
+      <li><a href="home.php">Home</a></li>
+      <li><a href="login.php">LOGIN</a></li>
       <li><a href="register.php">REGISTRATION</a></li>
-     
+ 
     </ul>
   </nav>
 </header>
-
 <div class="wrap">
   REGISTERATION
   <br><br>
@@ -52,11 +55,17 @@
 		<input placeholder="Phone" name="Phone" value="<?php echo $Phone ;?>" type="text"    />
 		<span class="error"> <?php echo $Phone_error;?></span>
 		
-		<div class="radio">
+		<div class='radio'>
+		<table >
+       <tr><th> gender</th>
+       <th>
 		<input type="radio"  name="Gender"  value="Male" checked="checked" /> Male 
-
-		<br>
+      </th>
+		<th>
 		<input type="radio"  name="Gender"  value="Female" /> Female 
+		</th>
+		</tr>
+		</table>
 		</div>
 		
     <span class="error"><?php echo $Gender_error;?></span>

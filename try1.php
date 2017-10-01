@@ -18,16 +18,19 @@ die("Could not connect to database");
 
     </head>
  <body>
- 	<header>
-   <a id="logo" href="/rezero.png"></a>
+ 	
+<header>
+
+    <a href="login.php" id="logo">
+                     <img src="rezero.png" height="55px" width=" 80px">
+                </a>
+  
   <nav>
-    <ul>
+    <ul>  
+      <li><a href="try1.php">INBOX</a></li>
       <li><a href="send.php">SEND</a></li>
-      
-      <li><a href="try1.php">inbox</a></li>
-      
-      <li><a href="logoutproc.php">logout</a></li>
-      
+      <li><a href="logoutproc.php">LOGOUT</a></li>
+ 
     </ul>
   </nav>
 </header>

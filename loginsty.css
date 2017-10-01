@@ -1,3 +1,5 @@
+
+
 .wrap{
 	background-color:white;
   padding:120px ;
@@ -9,6 +11,17 @@
   margin: 250px auto;
   text-align:center;
   border-radius:30px;
+}
+
+.wrap a{
+font-size: 26px;
+text-decoration: none;
+display: block;
+color: #999;
+margin-top: 20px;
+margin-left: 0 auto;
+
+
 }
 
 input{
@@ -38,7 +51,5 @@ button{
   color:#fff;
   float : center;
 }
-
-
 
 

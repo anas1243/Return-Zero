@@ -1,17 +1,12 @@
 
-p{
-  font-size:26px;
-  color:red;
-  float: left;
-  
-}
+
 .wrap{
   background-color:white;
   padding:120px ;
   font-size:62px;
   color:#888;
   width:320px;
-  height:600px;
+  height:700px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   margin: 250px auto;
   text-align:center;
@@ -53,8 +48,9 @@ button{
   margin-top:50px;
   position:relative;
   outline:0;
-    border-radius:30px;
+  border-radius:30px;
   background:#a0a0a0;
   color:#fff;
   float:center;
 }
+.error {color: #FF0000;font-size: 20px;text-align: right;}

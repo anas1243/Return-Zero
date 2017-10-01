@@ -49,7 +49,7 @@ $conn = new mysqli('sql105.epizy.com','epiz_20780607','ahrgsZmpNa','epiz_2078060
 
 		 $DB_error ="welcome ";
 
-    		header( "Refresh:2; url=try1.php" );
+    		header( "Refresh:2; url=http://return-zero.epizy.com/try1.php" );
 
 
 		 }else{

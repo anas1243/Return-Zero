@@ -8,18 +8,17 @@ if (mysqli_connect_error()) {
 die("Could not connect to database");
 }
 ?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
  <head>
     <meta charset="utf-8">
-    <title>RETURN_ZERO</title>
+    <title>mailBOX</title>
       <link type="text/css" rel="stylesheet" href="sendsty.css">
   <link type="text/css" rel="stylesheet" href="navsty.css">
 
     </head>
  <body>
-	 <header>
+ 	<header>
    <a id="logo" href="/rezero.png"></a>
   <nav>
     <ul>
@@ -38,10 +37,10 @@ die("Could not connect to database");
 if(isset($_GET['messsage'])){
 $id = $_GET['messsage'];
 
-	$query = "UPDATE message SET flag =1 WHERE ID ='$id' ";
-$result=mysqli_query($link, $query); 
- 
-	$query = "SELECT * FROM message WHERE ID ='$id' ";
+$query = "UPDATE message SET flag =1 WHERE ID ='$id' ";
+$result=mysqli_query($link, $query);
+
+$query = "SELECT * FROM message WHERE ID ='$id' ";
 $result=mysqli_query($link, $query);
 
 //$mes = mysql_query("SELECT * FROM message WHERE ID ='$id'");
@@ -54,16 +53,15 @@ $time = $row["TimeStamp"];
 
 
 <div class="wrap">
-  <a href="try1.php"> back to inbox</a>
+ 
 <table class="form1">
  <tr>
-       <td> from :   <?php echo $from;    ?></td>
-       <td> subject :<?php echo $subject; ?></td>
-       <td> time :   <?php echo $time;    ?></td>
+       <td> from   <br> <?php echo $from;    ?></td>
+       <td> subject<br> <?php echo $subject; ?></td>
+       <td> time   <br> <?php echo $time;    ?></td>
  </tr>
 </table>
-<pre> <?php echo $message; ?></pre>
-	<br><br>
+<pre> <?php echo $message; ?></pre><br><br>
 <table  class="form1"> 
 <tr>
 <th>
@@ -82,7 +80,7 @@ $time = $row["TimeStamp"];
 </div>
 
 <?php exit();} ?>
-	 
+
 
 <?php
 if(isset($_GET['delete'])){
@@ -100,6 +98,10 @@ die("please refresh again");
 exit();
 	}
 ?>
+  
+ 
+      
+  
 <div  id= "back" class="wrap">
 	<form action="" method="post">
 <?php
@@ -107,9 +109,11 @@ exit();
 
 echo '<table class="form1">
        <tr>
+       <th>case</th>        
        <th>from</th>
        <th>subject</th>
        <th>id</th>
+       
        </tr>';
     //   $query = mysql_query("SELECT * FROM message WHERE M_To='$x' ");{
 
@@ -119,16 +123,16 @@ if ($result=mysqli_query($link, $query)) {
 
   while($row=mysqli_fetch_array($result)){
 if($row["flag"] == 0 ){ $open = "not open";}
-else { $open = "open";}  	  
+else { $open = "open";}  	
 $from = $row["M_From"];
 $subject = $row["M_Subject"];
 $message = $row["Message"];
 $id= $row["ID"];
        echo ' <tr>';
-      echo ' <td><a href="?messsage='.$id.'"> '.$open.'</a></td>';
+       echo ' <td><a href="?messsage='.$id.'"> '.$open.'</a></td>';
        echo ' <td><a href="?messsage='.$id.'"> '.$from.'</a></td>';
        echo ' <td><a href="?messsage='.$id.'">'.$subject.'</a></td>';
-       echo ' <td><a href="?messsage='.$id.'">'.$id.' </a></td>';
+       echo ' <td><a href="?messsage='.$id.'">'.$id.' </a></td>'; 
        echo ' </tr>';
 }
 echo '</table>';

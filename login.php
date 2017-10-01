@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
      <meta charset="UTF-8">
-    <title>FuckMailBox</title>
+    <title>RETURN_ZERO</title>
     <?php include 'login_proc.php';?>
 	<link type="text/css" rel="stylesheet" href="loginsty.css">
 	<link type="text/css" rel="stylesheet" href="navsty.css">
@@ -15,18 +15,23 @@
 
 <body>
 	
-		<header>
-   <a id="logo" href="#">OP</a>
+	
+	
+<header>
+
+    <a href="login.php" id="logo">
+                     <img src="rezero.png" height="55px" width=" 80px">
+                </a>
+  
   <nav>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">LOGIN</a></li>
+    <ul>  
+      <li><a href="home.php">Home</a></li>
+      <li><a href="login.php">LOGIN</a></li>
       <li><a href="register.php">REGISTRATION</a></li>
  
     </ul>
   </nav>
 </header>
-	
 <div class='wrap'>
   Login
   <br><br>

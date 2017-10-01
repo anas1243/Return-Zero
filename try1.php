@@ -19,13 +19,29 @@ die("Could not connect to database");
 
     </head>
  <body>
+	 <header>
+   <a id="logo" href="/rezero.png"></a>
+  <nav>
+    <ul>
+      <li><a href="send.php">SEND</a></li>
+      
+      <li><a href="try1.php">inbox</a></li>
+      
+      <li><a href="logoutproc.php">logout</a></li>
+      
+    </ul>
+  </nav>
+</header>
 
   <?php
 
 if(isset($_GET['messsage'])){
 $id = $_GET['messsage'];
 
-$query = "SELECT * FROM message WHERE ID ='$id' ";
+	$query = "UPDATE message SET flag =1 WHERE ID ='$id' ";
+$result=mysqli_query($link, $query); 
+ 
+	$query = "SELECT * FROM message WHERE ID ='$id' ";
 $result=mysqli_query($link, $query);
 
 //$mes = mysql_query("SELECT * FROM message WHERE ID ='$id'");
@@ -47,26 +63,43 @@ $time = $row["TimeStamp"];
  </tr>
 </table>
 <pre> <?php echo $message; ?></pre>
+	<br><br>
+<table  class="form1"> 
+<tr>
+<th>
+<a href="?delete=<?php echo $id ?> ">  Delete Message</a>
+</th>
+<th>
+  
+  </th>
+<th>
+ <a href="try1.php">  back to inbox</a>
+
+</th>
+</tr>
+</table>
+
 </div>
 
 <?php exit();} ?>
+	 
 
+<?php
+if(isset($_GET['delete'])){
+	$id = $_GET['delete'];
 
- 	<header>
-   <a id="logo" href="#">OP</a>
-  <nav>
-    <ul>
-      <li><a href="send.php">SEND</a></li>
+$delete = "DELETE FROM message WHERE ID ='$id' ";
+$result=mysqli_query($link, $delete);
+if($result)
+{
+    	header( "Refresh:2; url=try1.php" );
+}	else{
+die("please refresh again");
+}
 
-      <li><a href="try1.php">inbox</a></li>
-
-      <li><a href="logoutproc.php">logout</a></li>
-
-    </ul>
-  </nav>
-</header>
-
-
+exit();
+	}
+?>
 <div  id= "back" class="wrap">
 	<form action="" method="post">
 <?php
@@ -85,14 +118,17 @@ $query = "SELECT * FROM message WHERE UserID='$y' ";
 if ($result=mysqli_query($link, $query)) {
 
   while($row=mysqli_fetch_array($result)){
+if($row["flag"] == 0 ){ $open = "not open";}
+else { $open = "open";}  	  
 $from = $row["M_From"];
 $subject = $row["M_Subject"];
 $message = $row["Message"];
 $id= $row["ID"];
        echo ' <tr>';
-       echo ' <td>'.$from.'</td>';
+      echo ' <td><a href="?messsage='.$id.'"> '.$open.'</a></td>';
+       echo ' <td><a href="?messsage='.$id.'"> '.$from.'</a></td>';
        echo ' <td><a href="?messsage='.$id.'">'.$subject.'</a></td>';
-       echo '<td>'.$id.'</td>';
+       echo ' <td><a href="?messsage='.$id.'">'.$id.' </a></td>';
        echo ' </tr>';
 }
 echo '</table>';

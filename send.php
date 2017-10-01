@@ -15,28 +15,33 @@
 
 <body>
 	
-		<header>
-   <a id="logo" href="#">OP</a>
+	
+<header>
+
+    <a href="login.php" id="logo">
+                     <img src="rezero.png" height="55px" width=" 80px">
+                </a>
+  
   <nav>
-    <ul>
+    <ul>  
       <li><a href="try1.php">INBOX</a></li>
-      <li><a href="#">SEND</a></li>
+      <li><a href="send.php">SEND</a></li>
       <li><a href="logoutproc.php">LOGOUT</a></li>
-          </ul>
+ 
+    </ul>
   </nav>
 </header>
+
 	
 <div class='wrap'>
   SEND MESSAGE
-  <br><br>
+  <br>
 
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" >
     
-    	<span class="error"> <?php echo $DB_error; ?></span>
-    	
-        <input type='text' id='to' name="M_To" placeholder='    TO:'>
+       	<span class="error"> <?php echo $DB_error; ?></span>
+        <input type='text' id='to' name="M_To" placeholder='    TO'>
         <span class="error"> <?php echo $M_To_error; ?></span>
-        
         <input type='text' id='subject' name="M_Subject" placeholder='    SUBJECT'>
         <span class="error"> <?php echo $M_Subject_error; ?></span>
 		<!-- <br><p>Send your message<p> -->   
@@ -46,5 +51,7 @@
   <button type="submit" data-submit="...Sending" class="login">Send Message</button>
 </form>
   </div>
+
+
 	</body>
 </html>

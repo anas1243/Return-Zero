@@ -2,7 +2,8 @@
   session_start();
    $x=$_SESSION['email'];
    $y=$_SESSION['UserID'];
-$link = mysqli_connect("localhost","root","","messaging system");
+$link = mysqli_connect('sql105.epizy.com','epiz_20780607','ahrgsZmpNa','epiz_20780607_zero');
+
 if (mysqli_connect_error()) {
 die("Could not connect to database");
 }
@@ -37,7 +38,7 @@ $time = $row["TimeStamp"];
 
 
 <div class="wrap">
-  <a href="try1.php"> back to inbox</a>  
+  <a href="try1.php"> back to inbox</a>
 <table class="form1">
  <tr>
        <td> from :   <?php echo $from;    ?></td>
@@ -50,22 +51,22 @@ $time = $row["TimeStamp"];
 
 <?php exit();} ?>
 
-  
+
  	<header>
    <a id="logo" href="#">OP</a>
   <nav>
     <ul>
       <li><a href="send.php">SEND</a></li>
-      
+
       <li><a href="try1.php">inbox</a></li>
-      
+
       <li><a href="logoutproc.php">logout</a></li>
-      
+
     </ul>
   </nav>
 </header>
-      
-  
+
+
 <div  id= "back" class="wrap">
 	<form action="" method="post">
 <?php
@@ -91,7 +92,7 @@ $id= $row["ID"];
        echo ' <tr>';
        echo ' <td>'.$from.'</td>';
        echo ' <td><a href="?messsage='.$id.'">'.$subject.'</a></td>';
-       echo '<td>'.$id.'</td>'; 
+       echo '<td>'.$id.'</td>';
        echo ' </tr>';
 }
 echo '</table>';

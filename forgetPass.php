@@ -22,7 +22,7 @@
    <a id="logo" href="#">OP</a>
   <nav>
     <ul>
-      <li><a href="#">Home</a></li>
+      <li><a href="index.php">Home</a></li>
        <li><a href="login.php">LOGIN</a></li>
       <li><a href="register.php">REGISTRATION</a></li>
      

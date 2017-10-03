@@ -12,8 +12,11 @@ require_once("mail_configuration.php");
 		 
 		 	$row = $result->fetch_assoc();
 		 	$Name = $row['Name'];
-
-
+                             //edit
+                           $id=$row['UserID'];
+		 	 session_start();
+		 	 $_SESSION['ID'] = $id;
+                           //end of edit
 
 
 $mail = new PHPMailer();

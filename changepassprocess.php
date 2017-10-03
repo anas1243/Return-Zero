@@ -38,9 +38,11 @@ $conn = new mysqli('sql105.epizy.com','epiz_20780607','ahrgsZmpNa','epiz_2078060
 		$password_error = "passwords do not match !!";
 	}else{
 
-
-
-
+//edit
+		session_start();
+		
+              $sess= $_SESSION['ID'];
+//end of edit
 
  	$password= test_input($_POST["Password"]);
 
@@ -48,8 +50,8 @@ $conn = new mysqli('sql105.epizy.com','epiz_20780607','ahrgsZmpNa','epiz_2078060
 
  	 if ($stmt = $conn->prepare("UPDATE user SET Password =?  WHERE UserID = ?")){
 
-
-				$stmt->bind_param('sd', $password, $ID);
+                                                                     //edit
+				$stmt->bind_param('sd', $password, $sess);
 
 				$stmt->execute();
             $stmt->close();
